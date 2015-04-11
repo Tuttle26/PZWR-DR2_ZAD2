@@ -1,0 +1,43 @@
+﻿<Window x:Class="PZW_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:PZW_2.Controls"
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="right">
+            <Button x:Name="AddLeft" Width="70" Margin="5">DodajL</Button>
+            <Button x:Name="AddRight" Width="70" Margin="5">DodajR</Button>
+        </StackPanel>
+
+        <controls:User Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Height="Auto" Title="Ivan" Width="80" Margin="10,0,10,0.4"></controls:User>
+
+
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Row="1" Grid.Column="1" Height="40" Width="300">
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" Margin="5">Search</TextBlock>
+        </Border>
+
+        <ScrollViewer Grid.Row="2" Grid.Column="0">
+            <StackPanel x:Name="RectangleContainer1" Orientation="Vertical">
+                <controls:User Height="128" Width="80" Title="Ivo"></controls:User>
+                <controls:User Height="128" Width="80" Title="Marko"></controls:User>
+                <controls:User Height="128" Width="80" Title="Ante"></controls:User>
+            </StackPanel>
+        </ScrollViewer>
+
+        <ScrollViewer Grid.Row="2" Grid.Column="1">
+            <StackPanel x:Name="RectangleContainer2" Orientation="Vertical">
+                <controls:Post Height="128" Width="350"></controls:Post>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
