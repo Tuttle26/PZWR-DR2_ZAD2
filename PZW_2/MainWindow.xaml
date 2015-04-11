@@ -36,7 +36,7 @@
 
         <ScrollViewer Grid.Row="2" Grid.Column="1">
             <StackPanel x:Name="RectangleContainer2" Orientation="Vertical">
-                <controls:Post Height="128" Width="350"></controls:Post>
+                <controls:Post Height="128" Width="350" Status="Moj super status"></controls:Post>
             </StackPanel>
         </ScrollViewer>
     </Grid>
